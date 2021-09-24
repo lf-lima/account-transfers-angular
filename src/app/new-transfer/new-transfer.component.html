@@ -1,0 +1,17 @@
+<section>
+  <form (ngSubmit)="newTransfer()">
+    <h1>Nova transferência</h1>
+
+    <div>
+      <label for="value">Valor</label>
+      <input type="number" name="value" [(ngModel)]="value">
+    </div>
+
+    <div>
+      <label for="account">Conta</label>
+      <input type="number" name="account" [(ngModel)]="account">
+    </div>
+
+    <button type="submit">Transferir</button>
+  </form>
+</section>
