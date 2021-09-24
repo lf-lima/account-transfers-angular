@@ -1,17 +1,21 @@
-<section>
-  <form (ngSubmit)="newTransfer()">
-    <h1>Nova transferência</h1>
+<div class="row h-100 d-flex align-items-center justify-content-center ">
+  <mat-card class="col-5">
+    <mat-card-title class="mb-4">Nova transferência</mat-card-title>
 
-    <div>
-      <label for="value">Valor</label>
-      <input type="number" name="value" [(ngModel)]="value">
-    </div>
+    <form (ngSubmit)="newTransfer()" class="d-flex flex-column ">
 
-    <div>
-      <label for="account">Conta</label>
-      <input type="number" name="account" [(ngModel)]="account">
-    </div>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label for="value">Valor</mat-label>
+        <input matInput type="text" placeholder="0" name="value" [(ngModel)]="value"  mask="separator.2" thousandSeparator=".">
+        <span matPrefix>$&nbsp;</span>
+      </mat-form-field>
 
-    <button type="submit">Transferir</button>
-  </form>
-</section>
+      <mat-form-field appearance="fill">
+        <mat-label for="account">Conta</mat-label>
+        <input matInput type="text" name="account" [(ngModel)]="account" mask="00000000-0">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="mt-4" type="submit">Transferir</button>
+    </form>
+  </mat-card>
+</div>

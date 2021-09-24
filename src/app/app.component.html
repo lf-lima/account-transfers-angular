@@ -1,6 +1,7 @@
-<nav>
-  <a routerLink="/new-transfer">Nova Transferência</a>
-  <br>
-  <a routerLink="/list-transfers">Listar Transferências</a>
+<nav class="navbar d-flex justify-content-start bg-dark">
+  <a mat-button class="text-light" routerLink="/new-transfer">Nova Transferência</a>
+  <a mat-button class="text-light" routerLink="/list-transfers">Listar Transferências</a>
 </nav>
-<router-outlet></router-outlet>
+<div class="container h-100" style="margin-top: -52px; padding-top: 52px;">
+  <router-outlet></router-outlet>
+</div>
